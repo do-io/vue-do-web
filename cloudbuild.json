@@ -4,7 +4,7 @@
         "name": "gcr.io/cloud-builders/git",
         "args": [
             "clone",
-            "gcr.io/vue-do-web/vue-do"
+            "https://source.cloud.google.com/vue-do-web/vue-do"
         ],
         "env": [
             "PROJECT_ROOT=vue-do"
