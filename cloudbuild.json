@@ -13,6 +13,15 @@
     {
         "name": "gcr.io/cloud-builders/yarn",
         "args": [
+            "install"
+        ],
+        "env": [
+            "PROJECT_ROOT=vue-do"
+        ]
+    },
+    {
+        "name": "gcr.io/cloud-builders/yarn",
+        "args": [
             "build",
             "-t",
             "gcr.io/vue-do-web/vue-do",
