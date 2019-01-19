@@ -1,0 +1,23 @@
+{
+    "steps": [
+    {
+        "name": "gcr.io/cloud-builders/git",
+        "args": [
+            "clone",
+            "https://github.com/do-io/vue-do"
+        ],
+        "env": [
+            "PROJECT_ROOT=hello"
+        ]
+    },
+    {
+        "name": "gcr.io/cloud-builders/yarn",
+        "args": [
+            "build",
+            "-t",
+            "gcr.io/my-project-id/myimage",
+            "."
+        ]
+    }
+    ]
+}
