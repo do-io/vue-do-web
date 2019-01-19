@@ -4,10 +4,10 @@
         "name": "gcr.io/cloud-builders/git",
         "args": [
             "clone",
-            "https://github.com/do-io/vue-do"
+            "gcr.io/vue-do-web/vue-do"
         ],
         "env": [
-            "PROJECT_ROOT=hello"
+            "PROJECT_ROOT=vue-do"
         ]
     },
     {
@@ -15,7 +15,7 @@
         "args": [
             "build",
             "-t",
-            "gcr.io/my-project-id/myimage",
+            "gcr.io/vue-do-web/vue-do",
             "."
         ]
     }
