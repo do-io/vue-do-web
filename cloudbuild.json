@@ -22,10 +22,8 @@
     {
         "name": "gcr.io/cloud-builders/yarn",
         "args": [
-            "build",
-            "-t",
-            "gcr.io/vue-do-web/vue-do",
-            "."
+            "run",
+            "build"
         ]
     }
     ]
