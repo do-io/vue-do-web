@@ -32,17 +32,6 @@
             "run",
             "build"
         ]
-    },
-    {
-        "name": "gcr.io/vue-do-web/firebase",
-        "args": [
-            "deploy",
-            "--token",
-            "AIzaSyC-0aFj0H17K23AfgiRLmYI3JxUrl6ZQj8"
-        ]
     }
-    ],
-    "images": [
-        "gcr.io/vue-do-web/firebase"
     ]
 }
