@@ -23,8 +23,20 @@
         "name": "gcr.io/cloud-builders/yarn",
         "args": [
             "run",
-            "build"
+            "test:unit"
+        ]
+    },
+    {
+        "name": "gcr.io/cloud-builders/docker",
+        "args": [
+            "build",
+            "-t",
+            "gcr.io/vue-do-web/firebase",
+            "."
         ]
     }
+    ],
+    "images": [
+        "gcr.io/vue-do-web/firebase"
     ]
 }
