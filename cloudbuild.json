@@ -27,12 +27,18 @@
         ]
     },
     {
-        "name": "gcr.io/cloud-builders/docker",
+        "name": "gcr.io/cloud-builders/yarn",
         "args": [
-            "build",
-            "-t",
-            "gcr.io/vue-do-web/firebase",
-            "."
+            "run",
+            "build"
+        ]
+    },
+    {
+        "name": "gcr.io/vue-do-web/firebase",
+        "args": [
+            "deploy",
+            "--token",
+            "AIzaSyC-0aFj0H17K23AfgiRLmYI3JxUrl6ZQj8"
         ]
     }
     ],
