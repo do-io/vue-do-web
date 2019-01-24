@@ -47,6 +47,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
   color: var(--dark-color);
   background-color: var(--dark-bg-color);
 }
@@ -67,7 +68,7 @@ a {
   // color: #2c3e50;
 }
 header {
-  padding: 30px;
+  padding: 2.19rem;
   display: grid;
   grid-row: 1;
   grid-template-columns: 1fr 2fr;
@@ -107,7 +108,7 @@ footer {
       color: var(--blue);
     }
     svg {
-      padding: 10px 30px;
+      padding: .5rem 2.28rem;
     }
     &:hover {
       opacity: 1;
