@@ -11,10 +11,11 @@
     <router-view/>
     <footer>
       <div id="info">
-        <font-awesome-icon :icon="['fab', 'linkedin']" />
-        <font-awesome-icon :icon="['fab', 'twitter']" />
-        <font-awesome-icon :icon="['fab', 'github']" />
-        <font-awesome-icon :icon="['fab', 'codepen']" />
+        <a href="https://linkedin.com/in/darrenodden" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin']" /></a>
+        <a href="https://twitter.com/darrenodden" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+        <a href="https://github.com/do-io" target="_blank"><font-awesome-icon :icon="['fab', 'github']" /></a>
+        <a href="https://codepen.io/DarrenOdden/" target="_blank"><font-awesome-icon :icon="['fab', 'codepen']" /></a>
+        <a href="https://dribbble.com/darrenodden" target="_blank"><font-awesome-icon :icon="['fab', 'dribbble']" /></a>
 
         <font-awesome-icon :icon="['fal', 'info-circle']" />
       </div>
@@ -35,6 +36,12 @@
   --red: #FF1744;
   --yellow: #FFD24C;
   --orange: #F57C00;
+
+}
+html, body {
+  margin: 0;
+  padding: 0;
+
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -87,16 +94,18 @@ header {
 footer {
   #info {
     opacity: .5;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     background: transparent;
     display: grid;
     position:fixed;
     right: 0;
     bottom: 0;
-    width: 100px;
     transition-property: opacity;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
+    a {
+      color: var(--blue);
+    }
     svg {
       padding: 10px 30px;
     }
