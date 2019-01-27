@@ -16,6 +16,7 @@
         <a href="https://github.com/do-io" target="_blank"><font-awesome-icon :icon="['fab', 'github']" /></a>
         <a href="https://codepen.io/DarrenOdden/" target="_blank"><font-awesome-icon :icon="['fab', 'codepen']" /></a>
         <a href="https://dribbble.com/darrenodden" target="_blank"><font-awesome-icon :icon="['fab', 'dribbble']" /></a>
+        <a href="https://www.behance.net/DarrenOdden" target="_blank"><font-awesome-icon :icon="['fab', 'behance']" /></a>
 
         <font-awesome-icon :icon="['fal', 'info-circle']" />
       </div>
@@ -62,11 +63,9 @@ a {
     opacity: 1;
   }
 }
-#app {
-  // font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  text-align: center;
-  // color: #2c3e50;
-}
+// #app {
+//   text-align: center;
+// }
 header {
   padding: 2.19rem;
   display: grid;
@@ -93,6 +92,10 @@ header {
 
 }
 footer {
+  footer {
+    bottom: 0;
+    position: absolute;
+  }
   #info {
     opacity: .5;
     padding-bottom: 20px;

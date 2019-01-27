@@ -6,10 +6,18 @@ import './registerServiceWorker';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSearch, faInfoCircle } from '@fortawesome/pro-light-svg-icons'
-import { faLinkedin, faTwitter, faGithub, faCodepen, faDribbble } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faTwitter, faGithub, faCodepen, faDribbble, faBehance } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faSearch, faInfoCircle, faLinkedin, faTwitter, faGithub, faCodepen, faDribbble)
+import webfont from 'webfontloader'
+
+library.add(faSearch, faInfoCircle, faLinkedin, faTwitter, faGithub, faCodepen, faDribbble, faBehance)
+
+webfont.load({
+  typekit: {
+    id: ' qpx4wdb'
+  }
+})
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false;
