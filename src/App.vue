@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <div id="logo">{{ title="Darren" }}</div>
+      <div id="logo"><bydesign-logo /></div>
       <div id="nav">
         <router-link to="/">Home</router-link> 
         <router-link to="/about">About</router-link>
@@ -67,7 +67,6 @@ a {
 //   text-align: center;
 // }
 header {
-  padding: 2.19rem;
   display: grid;
   grid-row: 1;
   grid-template-columns: 1fr 2fr;
@@ -75,8 +74,12 @@ header {
 }
 #logo {
   text-align: left;
+  svg {
+    max-height: 100px;
+  }
 }
 #nav {
+  padding: 2.19rem;
   color: var(--dark-color);
   text-align: right;
   a {

@@ -1,13 +1,13 @@
 <template>
     <section class="hero">
-        <!-- <div id="code" class="slide">
+        <div id="code" class="slide">
             <h2>CODE</h2>
             <CodeSvg />
-        </div> -->
-        <div id="design" class="slide">
+        </div>
+        <!-- <div id="design" class="slide">
             <h2>DESIGN</h2>
             <DesignSvg />
-        </div>
+        </div> -->
         
 
     </section>
