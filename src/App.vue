@@ -37,7 +37,7 @@
   --red: #FF1744;
   --yellow: #FFD24C;
   --orange: #F57C00;
-
+  --white: whitesmoke;
 }
 html, body {
   margin: 0;
@@ -74,8 +74,10 @@ header {
 }
 #logo {
   text-align: left;
+  padding: 14px;
   svg {
-    max-height: 100px;
+    max-height: 80px;
+    min-width: 256px
   }
 }
 #nav {
@@ -114,7 +116,10 @@ footer {
       color: var(--blue);
     }
     svg {
-      padding: .5rem 2.28rem;
+      padding: .35rem 2.19rem;
+      &.fa-info-circle {
+       padding: 1rem 2.19rem .35rem;
+      }
     }
     &:hover {
       opacity: 1;
