@@ -121,7 +121,27 @@ export default class HomeSlider extends Vue {
         }
     }
 }
-
+@media screen and (max-width: 1000px) {
+    .slide {
+        >div {
+            display: block;
+        }
+        .rolling {
+            margin: 1rem 0;
+            min-width: 410px;
+            height: 280px;
+        }
+    }
+}
+@media screen and (max-width: 570px) {
+    .slide {
+        .rolling {
+            width: 68vw;
+            min-width: initial;
+            margin-right: 2rem;
+        }
+    }
+}
 @media screen and (min-width: 1160px) {
     .slide {
         svg {
