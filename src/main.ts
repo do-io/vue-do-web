@@ -23,7 +23,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.component(
     'bydesign-logo', 
-    () => import('../public/img/byDesign.svg')
+    () => import('@/../public/img/byDesign.svg')
   )
 
 Vue.config.productionTip = false

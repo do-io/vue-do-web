@@ -53,8 +53,8 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import CodeSvg from '../../public/img/developer_coding_6mjf.svg'
-import DesignSvg from '../../public/img/interaction_design_odgc.svg'
+import CodeSvg from "@/../public/img/developer_coding_6mjf.svg"
+import DesignSvg from "@/../public/img/interaction_design_odgc.svg"
 
 @Component({
   components: {
