@@ -3,26 +3,30 @@
         <article id="about">
             <h1>About a Charismatic Codefauna!</h1>
             <div>
-                <p>Code /kōd/ noun <br/>
+                <!-- <p>Code <br/>/kōd/ noun 
                     <ol>
                         <li>a system of words, letters, figures, or other symbols substituted for other words, letters, etc.</li>
                         <li>program instructions</li>
                     </ol>
                 </p>
-                <p>Fauna /fônə/ noun <br/>
+                <p>Fauna <br/>/fônə/ noun
                     <ol>
                         <li>the animals of a particular region, habitat, or geological period</li>
                     </ol>
-                </p>
-                <p>Ape /āp/ noun <br/>
+                </p> -->
+                <p>Charismatic Codefauna <br/>/kerəzˈmadik kōdˈfônə / noun
                     <ol>
-                        <li>a large primate that lacks a tail</li>
-                        <li>Darren</li>
+                        <li>a large animal species with symbolic value intrinsic to detailing code architectures</li>
+                        <!-- <li>Darren</li> -->
                     </ol>
                 </p>
                 <p>Since I was a kid, I had two interests, figuring out how to make things work, and drawing.</p>
-                <p>Since I was introduced to caligraphy and lettering books, I loved letterforms. I was given a calligraphy set, but I learned I liked drawing the letters more.</p>
-                <p>Starting with cars and things laying around the house, I would study and experiment with new ways to use what was put in front of me. When I gained access to computers, what I tinkered on changed.</p>
+                <p>Introduced to caligraphy and lettering books, I loved letterforms. I was given a calligraphy set, but I learned I prefered letter formss more than the art of calligraphy.</p>
+                <p>I also had a growing stack of hot rod magazines. I would read and study the builds, looking at the designs and shapes of the cars and the intrigue of building a blueprinted and balanced engine.</p>
+                <p>I would be right there helping my Uncle and Grandpa work on the farm implements. I would go out to the shop and use the manual drill press and play in the hay stacks and parked tractors.</p>
+                <p>It was all about seeing how things worked. What would happen if two things came together.</p>
+                <p>As I got older, I would study and experiment with new ways to use what was put in front of me. Broken radios and tape decks became fodder for new ideas. The smell of ozone became normal.</p>
+                <p>When I gained access to computers, what I tinkered on changed.</p>
                 <p>I learned C++ and Assembly because I wanted to write a computer game. I learned enough that I was able to get employed by Borland International, a programming tools company.</p>
                 <p>At Borland, I was introduced to relational databases and additional languages.</p>
                 <p>When I first started at my first code job, we were encouraged to teach code classes to others in the business. It made sure we shared our knowledge, and it helped cement what we knew. At least, what we thought we knew. We also learned new things from each other.</p>
@@ -46,18 +50,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
-import CreativeSvg from '@/../public/img/creative_thinking_b3bcv2.svg'
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import CreativeSvg from '@/../public/img/creative_thinking_b3bcv2.svg';
 
 @Component({
   components: {
-    CreativeSvg
+    CreativeSvg,
   },
 })
 export default class HomeSlider extends Vue {
-    @Prop() private msg!: string
+    @Prop() private msg!: string;
 }
-
 </script>
 
 <style scoped lang="scss">
@@ -81,7 +84,7 @@ article {
     grid-column: 2;
     margin-right: 100px;
     margin-left: 2.19rem;
-    height: calc(100% - 6rem);
+    height: calc(100% - 8rem);
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto 1fr;
@@ -91,10 +94,9 @@ article {
         margin-left: 2.19rem;
     }
     >div {
-        column-width: 15rem;
-        column-gap: 2.19rem;
-        height: 100%;
+        height: auto;
         padding-bottom: 1.5rem;
+        padding-right: 1.5rem;
         grid-column: 2;
         grid-row: 2;
         margin-left: 2.19rem;
@@ -108,6 +110,7 @@ article {
     article {
         h1 {
             grid-column: 1 / span 2;
+            margin-left: 0;
         }
         >div {
             // grid-column: 1;
@@ -117,9 +120,17 @@ article {
 }
 @media screen and (max-width: 530px) {
     article {
+        height: auto;
+        grid-template-rows: 1fr;
         >div {
+            margin-left: 0;
             grid-column: 1 / span 2;
-            max-height: 17rem;
+            max-height: initial;
+        }
+    }
+    main {
+        svg {
+            opacity: 0;
         }
     }
 }
