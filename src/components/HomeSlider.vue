@@ -65,6 +65,7 @@ export default class HomeSlider extends Vue {
   @Prop() private msg!: string;
 
   public mounted() {
+    // @ts-ignore
     document.querySelectorAll("a[href='#code']")[0].click();
   }
 }
