@@ -163,8 +163,6 @@ main {
     > div {
       height: calc(100% - 5rem);
       overflow-y: scroll;
-      scrollbar-color: var(--yellow);
-      scrollbar-width: thin;
       scroll-behavior: smooth;
       > p {
         padding-right: 1rem;
