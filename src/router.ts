@@ -11,15 +11,38 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home,
+      component: () => import('@/views/Home.vue'),
+      meta: {
+        title: 'Code. Design. Story. Strategy. - ' + process.env.VUE_APP_TITLE,
+        metaTags: [
+          {
+            name: 'description',
+            content: 'this is a sample description',
+          },
+          {
+            name: 'og:description',
+            content: 'this is an og sample description',
+          },
+        ],
+      },
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: () => import('@/views/About.vue'),
+      meta: {
+        title: 'About a Charismatic Codefauna - ' + process.env.VUE_APP_TITLE,
+        metaTags: [
+          {
+            name: 'description',
+            content: 'this is a sample about description',
+          },
+          {
+            name: 'og:description',
+            content: 'this is an og sample about description',
+          },
+        ],
+      },
     },
   ],
 });

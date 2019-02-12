@@ -16,3 +16,12 @@
     >{{ story.next_story.title }}</router-link>
   </article>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+export default Vue.extend({
+  data() {},
+  methods() {},
+  computed() {},
+});
+</script>

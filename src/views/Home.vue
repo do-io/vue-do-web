@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <HomeSlider />
+    <HomeSlider/>
     <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
   </div>
 </template>
@@ -15,5 +15,10 @@ import HomeSlider from '@/components/HomeSlider.vue'; // @ is an alias to /src
     HomeSlider,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  public created() {
+    document.title =
+      'Code. Design. Story. Strategy - ' + process.env.VUE_APP_TITLE;
+  }
+}
 </script>

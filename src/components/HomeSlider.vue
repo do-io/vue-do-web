@@ -51,22 +51,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import CodeSvg from "@/../public/img/developer_coding_6mjf.svg";
-import DesignSvg from "@/../public/img/interaction_design_odgc.svg";
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import CodeSvg from '@/../public/img/developer_coding_6mjf.svg';
+import DesignSvg from '@/../public/img/interaction_design_odgc.svg';
 
 @Component({
   components: {
     CodeSvg,
-    DesignSvg
-  }
+    DesignSvg,
+  },
 })
 export default class HomeSlider extends Vue {
   @Prop() private msg!: string;
 
   public mounted() {
     // @ts-ignore
-    document.querySelectorAll("a[href='#code']")[0].click();
+    document.querySelectorAll('a[href=\'#code\']')[0].click();
   }
 }
 </script>
