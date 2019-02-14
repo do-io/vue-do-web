@@ -88,4 +88,10 @@ a {
     height: calc(100vh - 115px);
   }
 }
+.definition {
+  background-color: var(--yellow);
+  color: var(--dark-bg-color);
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
 </style>
