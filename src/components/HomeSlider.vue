@@ -58,8 +58,8 @@ import DesignSvg from "@/assets/images/interaction_design_odgc.svg";
 @Component({
   components: {
     CodeSvg,
-    DesignSvg,
-  },
+    DesignSvg
+  }
 })
 export default class HomeSlider extends Vue {
   @Prop() private msg!: string;
@@ -82,7 +82,7 @@ main {
   left: 2.19rem;
   a {
     margin-right: 1.5rem;
-    height: 0.5rem;
+    line-height: 1.8;
     width: 5rem;
     overflow: hidden;
     background-color: transparent;
@@ -90,10 +90,22 @@ main {
     border-bottom: 2px solid var(--blue);
     display: inline-block;
     &[href="#code"] {
+      color: var(--green);
       border-bottom-color: var(--green);
+      opacity: 0;
+      animation: fadeIn ease-in-out 1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      animation-delay: 1s;
     }
     &[href="#design"] {
+      color: var(--yellow);
       border-bottom-color: var(--yellow);
+      opacity: 0;
+      animation: fadeIn ease-in-out 1;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      animation-delay: 1.5s;
     }
   }
 }

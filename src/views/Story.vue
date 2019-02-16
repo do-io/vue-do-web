@@ -22,21 +22,61 @@
       <input v-model="author" placeholder="Writer" class="input" required>
       <input v-model="summary" placeholder="Summary" class="input" required>
       <input v-model="body" placeholder="Body" class="input" required>
-      <input v-model="datetime" placeholder="Date Published" class="input" required>
-      <button type="submit" class="button">Add New Comic</button>
+      <input v-model="created" placeholder="Date Published" class="input" required>
+      <select v-model="status">
+        <option>Draft</option>
+        <option>Published</option>
+        <option>Private</option>
+      </select>
+      <button type="submit" class="button">Save</button>
     </form>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+// import firebase from "firebase";
+// import { db } from "@/main";
+
 export default Vue.extend({
-  data() {
-    return {
-      story: []
-    };
-  }
-  // methods() {},
+  // data() {
+  //   return {
+  //     story: [],
+  //     title: "",
+  //     author: "",
+  //     summary: "",
+  //     body: "",
+  //     created: "",
+  //     status: ""
+  //   };
+  // },
+  // firestore() {
+  //   return {
+  //     stories: db.collection("stories").orderBy("createdAt")
+  //   };
+  // },
+  // methods: {
+  //   addComic(name, image) {
+  //     const createdAt = new Date();
+  //     db.collection("comics").add({ name, image, createdAt });
+  //     // Clear values
+  //     this.name = "";
+  //     this.image = "";
+  //   },
+  //   deleteComic(id) {
+  //     db.collection("comics")
+  //       .doc(id)
+  //       .delete();
+  //   },
+  //   logout() {
+  //     firebase
+  //       .auth()
+  //       .signOut()
+  //       .then(() => {
+  //         this.$router.replace("login");
+  //       });
+  //   }
+  // }
   // computed() {},
 });
 </script>

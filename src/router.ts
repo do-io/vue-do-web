@@ -18,17 +18,7 @@ export default new Router({
       name: "home",
       component: () => import("@/views/Home.vue"),
       meta: {
-        title: "Code. Design. Story. Strategy. - " + process.env.VUE_APP_TITLE,
-        metaTags: [
-          {
-            name: "description",
-            content: "this is a sample description"
-          },
-          {
-            name: "og:description",
-            content: "this is an og sample description"
-          }
-        ]
+        title: "Code. Design. Story. Strategy. - " + process.env.VUE_APP_TITLE
       }
     },
     {
@@ -36,17 +26,7 @@ export default new Router({
       name: "stories",
       component: () => import("@/views/Stories.vue"),
       meta: {
-        title: "Stories from a Charismatic Codefauna",
-        metaTags: [
-          {
-            name: "description",
-            content: "this is a sample about description"
-          },
-          {
-            name: "og:description",
-            content: "this is an og sample about description"
-          }
-        ]
+        title: "Stories from a Charismatic Codefauna"
       }
     },
     {
@@ -54,17 +34,15 @@ export default new Router({
       name: "about",
       component: () => import("@/views/About.vue"),
       meta: {
-        title: "About a Charismatic Codefauna - " + process.env.VUE_APP_TITLE,
-        metaTags: [
-          {
-            name: "description",
-            content: "this is a sample about description"
-          },
-          {
-            name: "og:description",
-            content: "this is an og sample about description"
-          }
-        ]
+        title: "About a Charismatic Codefauna - " + process.env.VUE_APP_TITLE
+      }
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import("@/views/SignIn.vue"),
+      meta: {
+        title: "Sign In to " + process.env.VUE_APP_TITLE
       }
     }
   ]

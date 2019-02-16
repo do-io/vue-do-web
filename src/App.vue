@@ -80,6 +80,26 @@ a {
     opacity: 1;
   }
 }
+::placeholder {
+  opacity: 1;
+}
+input,
+button,
+select {
+  font-family: inherit;
+  font-size: 0.9rem;
+  border-radius: 0;
+  border: none;
+}
+input,
+select {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0.5rem;
+}
+button {
+  padding: 0.25rem 1rem;
+  margin: 0.25rem 0.5rem;
+}
 #app {
   height: 100vh;
   width: 100vw;
@@ -88,10 +108,37 @@ a {
     height: calc(100vh - 115px);
   }
 }
+.center {
+  text-align: center;
+}
 .definition {
   background-color: var(--yellow);
   color: var(--dark-bg-color);
   padding: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+.thick {
+  font-family: "Blenny";
+}
+.card {
+  width: 40vw;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 18px 20px 0px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 6px 5px 0px rgba(0, 0, 0, 0.2);
+  // transition: all 0.3s ease-in-out;
+}
+// .card:hover {
+//   box-shadow: 0 18px 20px 0px rgba(0, 0, 0, 0.3);
+// }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

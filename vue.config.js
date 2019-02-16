@@ -9,5 +9,5 @@ module.exports = {
                 loader: 'vue-svg-loader',
             }, ],
         }
-    }
+    },
 };

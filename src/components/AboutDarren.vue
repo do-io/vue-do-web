@@ -45,8 +45,8 @@ import CreativeSvg from "@/assets/images/creative_thinking_b3bcv2.svg";
 
 @Component({
   components: {
-    CreativeSvg,
-  },
+    CreativeSvg
+  }
 })
 export default class HomeSlider extends Vue {
   @Prop() private msg!: string;
@@ -67,6 +67,11 @@ main {
     display: block;
     left: 2.19rem;
     z-index: -1;
+    opacity: 0;
+    animation: fadeIn ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
   }
 }
 article {
@@ -82,6 +87,11 @@ article {
     grid-column: 2;
     grid-row: 1;
     margin-left: 2.19rem;
+    opacity: 0;
+    animation: fadeIn ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 1s;
   }
   > div {
     height: auto;
@@ -91,6 +101,11 @@ article {
     grid-row: 2;
     margin-left: 2.19rem;
     overflow-x: scroll;
+    opacity: 0;
+    animation: fadeIn ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
     p:first-child {
       margin-top: 0;
     }
