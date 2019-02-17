@@ -1,5 +1,6 @@
 <template>
   <main>
+    <button class="button logout" v-if="isLoggedIn" @click="logout">Logout</button>
     <h1>{{ pageTitle }}</h1>
     <div v-for="(story,index) in stories" :key="story.slug + '_' + index">
       <router-link :to="'/story/' + story.slug">
@@ -18,15 +19,16 @@
 
 <script lang="ts">
 import Vue from "vue";
-import firebase from "firebase";
+import firebase, { auth } from "firebase";
 import { db } from "@/main";
+import { mapState, mapGetters } from "vuex";
 
 const pageTitle = "Stories from a Charismatic Codefauna";
 
 export default Vue.extend({
   data() {
     return {
-      pageTitle,
+      pageTitle: "Stories from a Charismatic Codefauna",
       stories: []
     };
   },
@@ -51,16 +53,26 @@ export default Vue.extend({
     return {
       stories: db.collection("stories").orderBy("createdAt")
     };
-  }
-
-  // methods: {
-  //   getStories() {
-  //     return false;
-  //   }
-  // }
-  // computed() {
-  //   // this.getStories();
-  // }
+  },
+  methods: {
+    isAuth() {
+      console.log(this.isLoggedIn);
+      return this.$store.getters.isLoggedIn;
+    },
+    logout() {
+      console.log(this.isLoggedIn);
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$store.dispatch("logout");
+        })
+        .catch(() => {
+          this.$store.commit("login_error");
+        });
+    }
+  },
+  computed: mapGetters(["isLoggedIn"])
 });
 </script>
 

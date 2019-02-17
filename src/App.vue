@@ -120,6 +120,13 @@ button {
 .thick {
   font-family: "Blenny";
 }
+.logout {
+  max-width: 90px;
+  justify-self: end;
+  align-self: end;
+  background-color: var(--green);
+  color: var(--dark-bg-color);
+}
 .card {
   width: 40vw;
   min-width: 300px;

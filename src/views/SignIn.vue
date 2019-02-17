@@ -22,6 +22,7 @@
 <script lang="ts">
 import firebase from "firebase";
 import Vue from "vue";
+import store from "@/store";
 
 const pageTitle = "Do I/O";
 
@@ -39,7 +40,7 @@ export default Vue.extend({
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
         .then(user => {
-          this.$router.replace("");
+          this.$router.replace("/stories");
         })
         .catch(err => {
           alert("Oops. " + err.message);
@@ -51,7 +52,8 @@ export default Vue.extend({
         .auth()
         .signInWithPopup(provider)
         .then(result => {
-          this.$router.replace("");
+          this.$store.dispatch("login");
+          this.$router.replace("/stories");
         })
         .catch(err => {
           alert("Oops. " + err.message);
