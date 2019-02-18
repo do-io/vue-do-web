@@ -1,6 +1,10 @@
 {
     "steps": [{
-            "name": "gcr.io/cloud-builders/git"
+            "name": "gcr.io/cloud-builders/git",
+            "args": [
+                "clone",
+                "https://source.developers.google.com/p/do-io-vue/r/github_do-io_vue-do-web"
+            ]
         },
         {
             "name": "gcr.io/cloud-builders/yarn",
@@ -8,7 +12,7 @@
                 "install"
             ],
             "env": [
-                "PROJECT_ROOT=vue-do"
+                "PROJECT_ROOT=vue-do-web"
             ]
         },
         {
