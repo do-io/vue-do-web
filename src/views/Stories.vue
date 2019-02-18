@@ -1,6 +1,9 @@
 <template>
   <main>
-    <button class="button logout" v-if="isLoggedIn" @click="logout">Logout</button>
+    <div v-if="isLoggedIn" class="edit-nav">
+      <button class="button new-story" @click="newStory">New Story</button>
+      <button class="button logout" @click="logout">Logout</button>
+    </div>
     <h1>{{ pageTitle }}</h1>
     <div v-for="(story,index) in stories" :key="story.slug + '_' + index">
       <router-link :to="'/story/' + story.slug">
@@ -55,9 +58,8 @@ export default Vue.extend({
     };
   },
   methods: {
-    isAuth() {
-      console.log(this.isLoggedIn);
-      return this.$store.getters.isLoggedIn;
+    newStory() {
+      this.$router.replace("story");
     },
     logout() {
       console.log(this.isLoggedIn);

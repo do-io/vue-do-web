@@ -100,6 +100,16 @@ button {
   padding: 0.25rem 1rem;
   margin: 0.25rem 0.5rem;
 }
+section {
+  margin-left: 2.19rem;
+  margin-right: 100px;
+}
+details {
+  cursor: pointer;
+  li {
+    margin: 0.5rem 0;
+  }
+}
 #app {
   height: 100vh;
   width: 100vw;
@@ -120,13 +130,6 @@ button {
 .thick {
   font-family: "Blenny";
 }
-.logout {
-  max-width: 90px;
-  justify-self: end;
-  align-self: end;
-  background-color: var(--green);
-  color: var(--dark-bg-color);
-}
 .card {
   width: 40vw;
   min-width: 300px;
@@ -139,6 +142,21 @@ button {
 // .card:hover {
 //   box-shadow: 0 18px 20px 0px rgba(0, 0, 0, 0.3);
 // }
+.edit-nav {
+  display: flex;
+  justify-content: end;
+  align-content: end;
+}
+.new-story {
+  background-color: var(--green);
+}
+.logout {
+  max-width: 90px;
+  justify-self: end;
+  align-self: end;
+  background-color: var(--yellow);
+  color: var(--dark-bg-color);
+}
 
 @keyframes fadeIn {
   from {

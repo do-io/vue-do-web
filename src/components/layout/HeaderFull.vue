@@ -5,9 +5,9 @@
     </div>
     <div id="nav">
       <router-link to="/">Home</router-link>
-      <router-link to="/stories">Stories</router-link>
+      <!-- <router-link to="/stories">Stories</router-link> -->
       <router-link to="/about">About</router-link>
-      <font-awesome-icon :icon="['fal', 'search']" id="search"/>
+      <!-- <font-awesome-icon :icon="['fal', 'search']" id="search"/> -->
     </div>
   </header>
 </template>

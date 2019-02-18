@@ -2,7 +2,7 @@
   <section>
     <article id="story">
       <h1>{{ story.title }}</h1>
-      <h4>{{ story.author.first_name }} {{ story.author.last_name }}</h4>
+      <!-- <h4>{{ story.author.first_name }} {{ story.author.last_name }}</h4> -->
       <div v-html="story.body"></div>
 
       <router-link
@@ -24,7 +24,7 @@
       <input v-model="body" placeholder="Body" class="input" required>
       <input v-model="created" placeholder="Date Published" class="input" required>
       <select v-model="status">
-        <option>Draft</option>
+        <option selected>Draft</option>
         <option>Published</option>
         <option>Private</option>
       </select>
@@ -39,17 +39,17 @@ import Vue from "vue";
 // import { db } from "@/main";
 
 export default Vue.extend({
-  // data() {
-  //   return {
-  //     story: [],
-  //     title: "",
-  //     author: "",
-  //     summary: "",
-  //     body: "",
-  //     created: "",
-  //     status: ""
-  //   };
-  // },
+  data() {
+    return {
+      story: [],
+      title: "",
+      author: "",
+      summary: "",
+      body: "",
+      created: "",
+      status: ""
+    };
+  }
   // firestore() {
   //   return {
   //     stories: db.collection("stories").orderBy("createdAt")

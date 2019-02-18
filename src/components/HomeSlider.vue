@@ -190,7 +190,7 @@ main {
       padding: 0;
     }
     li {
-      margin: 0.2rem 0;
+      margin: 0.5rem 0;
     }
   }
   &#code {
