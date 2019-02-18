@@ -1,37 +1,29 @@
 {
-    "steps": [
-    {
-        "name": "gcr.io/cloud-builders/git",
-        "args": [
-            "clone",
-            "https://source.developers.google.com/p/vue-do-web/r/vue-do"
-        ],
-        "env": [
-            "PROJECT_ROOT=vue-do"
-        ]
-    },
-    {
-        "name": "gcr.io/cloud-builders/yarn",
-        "args": [
-            "install"
-        ],
-        "env": [
-            "PROJECT_ROOT=vue-do"
-        ]
-    },
-    {
-        "name": "gcr.io/cloud-builders/yarn",
-        "args": [
-            "run",
-            "test:unit"
-        ]
-    },
-    {
-        "name": "gcr.io/cloud-builders/yarn",
-        "args": [
-            "run",
-            "build"
-        ]
-    }
+    "steps": [{
+            "name": "gcr.io/cloud-builders/git",
+        },
+        {
+            "name": "gcr.io/cloud-builders/yarn",
+            "args": [
+                "install"
+            ],
+            "env": [
+                "PROJECT_ROOT=vue-do"
+            ]
+        },
+        {
+            "name": "gcr.io/cloud-builders/yarn",
+            "args": [
+                "run",
+                "test:unit"
+            ]
+        },
+        {
+            "name": "gcr.io/cloud-builders/yarn",
+            "args": [
+                "run",
+                "build"
+            ]
+        }
     ]
 }
