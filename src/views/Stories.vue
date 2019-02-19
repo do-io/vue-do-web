@@ -62,7 +62,6 @@ export default Vue.extend({
       this.$router.replace("story");
     },
     logout() {
-      console.log(this.isLoggedIn);
       firebase
         .auth()
         .signOut()
