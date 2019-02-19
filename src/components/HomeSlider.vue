@@ -230,10 +230,14 @@ main {
       grid-row: 1;
     }
     .rolling {
+      height: 100%;
       margin: 2.19rem 100px 0 2.19rem;
       > div {
         height: calc(100% - 6.5rem);
       }
+    }
+    svg {
+      opacity: 0;
     }
   }
 }

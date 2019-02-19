@@ -135,7 +135,7 @@ article {
   }
   main {
     svg {
-      opacity: 0;
+      opacity: 0 !important;
     }
   }
 }
