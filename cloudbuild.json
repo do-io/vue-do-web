@@ -28,6 +28,18 @@
                 "run",
                 "build"
             ]
+        },
+        {
+            "name": "gcr.io/$PROJECT_ID/firebase",
+            "args": [
+                "deploy",
+                "-P",
+                "$PROJECT_ID",
+                "--only",
+                "hosting",
+                "--token",
+                "$_FIREBASE_DEPLOY_TOKEN"
+            ]
         }
     ]
 }
