@@ -1,0 +1,11 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /stories/{story} {
+      allow read: if true; 
+      allow write: if isSignedOn();
+    }
+    function isSignedOn() {
+    return request.auth != null;
+    }
+  }
+}
