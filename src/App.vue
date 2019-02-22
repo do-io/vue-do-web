@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <headerFull/>
+    <mq-layout mq="tablet+">
+      <headerFull/>
+    </mq-layout>
+    <mq-layout mq="phone">
+      <headerPhone/>
+    </mq-layout>
     <router-view/>
     <footerFull/>
   </div>
@@ -114,9 +119,9 @@ details {
   height: 100vh;
   width: 100vw;
   position: relative;
-  > div {
-    height: calc(100vh - 115px);
-  }
+  // > div {
+  //   height: calc(100vh - 115px);
+  // }
 }
 .center {
   text-align: center;

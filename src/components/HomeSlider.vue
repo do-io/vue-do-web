@@ -4,20 +4,18 @@
       <h2>CODE</h2>
       <div class="rolling">
         <h3>Developer Advocate; Code Agnostic!</h3>
-        <div>
-          <p>Many get that one tool and want to build everything with it.</p>
-          <p>The same as a mechanic has specialized tools to set the torque on the engine, I have learned different languages specialized for their specific job.</p>
-          <p>Starting from C++ and moving through JavaScript, Perl, Java, C#, and PHP, each language has its own nuances that make them special for what they do.</p>
-          <p>After all - you can hammer a nail with a skill saw, but it doesn't mean you should</p>
-          <details>
-            <summary>Development Specialties</summary>
-            <ul>
-              <li>JavaScript, ReactJS, VueJS, ES6, D3.js</li>
-              <li>SASS, Foundation, Gulp, TravisCI</li>
-              <li>PHP, Drupal, WordPress, NodeJS, C++, C#</li>
-            </ul>
-          </details>
-        </div>
+        <p>Many get that one tool and want to build everything with it.</p>
+        <p>The same as a mechanic has specialized tools to set the torque on the engine, I have learned different languages specialized for their specific job.</p>
+        <p>Starting from C++ and moving through JavaScript, Perl, Java, C#, and PHP, each language has its own nuances that make them special for what they do.</p>
+        <p>After all - you can hammer a nail with a skill saw, but it doesn't mean you should</p>
+        <details>
+          <summary>Development Specialties</summary>
+          <ul>
+            <li>JavaScript, ReactJS, VueJS, ES6, D3.js</li>
+            <li>SASS, Foundation, Gulp, TravisCI</li>
+            <li>PHP, Drupal, WordPress, NodeJS, C++, C#</li>
+          </ul>
+        </details>
       </div>
       <CodeSvg/>
     </article>
@@ -25,20 +23,18 @@
       <h2>DESIGN</h2>
       <div class="rolling">
         <h3>People are the designation!</h3>
-        <div>
-          <p>Brandmarks, mobile applications and magazines all have commonalities – people use them</p>
-          <p>The brandmarks help peole know who has made or is selling a product or service.</p>
-          <p>Applications need to be easy to use and consider how people will use the application or it isn't helpful.</p>
-          <p>Magazines, newspapers, and powerpoint presentations need to convey information aeasily without wearing down the reader.</p>
-          <p>Think of entering a dark room new to you. Do you turn on the lights without much of a thought?</p>
-          <details>
-            <summary>Design Specialties</summary>
-            <ul>
-              <li>Web Design, Interaction Design (IxD/UX), Brand Development</li>
-              <li>Illustrator, XD, Photoshop, Invision</li>
-            </ul>
-          </details>
-        </div>
+        <p>Brandmarks, mobile applications and magazines all have commonalities – people use them</p>
+        <p>The brandmarks help peole know who has made or is selling a product or service.</p>
+        <p>Applications need to be easy to use and consider how people will use the application or it isn't helpful.</p>
+        <p>Magazines, newspapers, and powerpoint presentations need to convey information aeasily without wearing down the reader.</p>
+        <p>Think of entering a dark room new to you. Do you turn on the lights without much of a thought?</p>
+        <details>
+          <summary>Design Specialties</summary>
+          <ul>
+            <li>Web Design, Interaction Design (IxD/UX), Brand Development</li>
+            <li>Illustrator, XD, Photoshop, Invision</li>
+          </ul>
+        </details>
       </div>
       <DesignSvg/>
     </article>
@@ -85,7 +81,7 @@ main {
     line-height: 1.8;
     width: 5rem;
     overflow: hidden;
-    background-color: transparent;
+    background-color: var(--dark-bg-color);
     color: transparent;
     border-bottom: 2px solid var(--blue);
     display: inline-block;
@@ -168,18 +164,14 @@ main {
     display: block;
     padding: 1rem 1.5rem;
     margin: 0 0 2.19rem 2.19rem;
-    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
     background-color: rgba(0, 0, 0, 0.35);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
     border-left: 1px solid;
     z-index: 1;
-    > div {
-      height: calc(100% - 5rem);
-      overflow-y: scroll;
-      scroll-behavior: smooth;
-      > p {
-        padding-right: 1rem;
-      }
+    p {
+      padding-right: 1rem;
     }
     details {
       margin: 1rem 0;
@@ -201,9 +193,9 @@ main {
     }
     .rolling {
       border-color: var(--green);
-      > div {
-        height: calc(100% - 7rem);
-      }
+      // > div {
+      //   height: calc(100% - 7rem);
+      // }
     }
   }
   &#design {
@@ -224,7 +216,7 @@ main {
 }
 @media screen and (max-width: 800px) {
   .slide {
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: auto 1fr 12rem;
     grid-template-columns: 1fr;
     h2 {
       grid-row: 1;
@@ -233,7 +225,7 @@ main {
       height: 100%;
       margin: 2.19rem 100px 0 2.19rem;
       > div {
-        height: calc(100% - 6.5rem);
+        height: calc(100% - 3.5rem);
       }
     }
     svg {

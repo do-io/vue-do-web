@@ -18,6 +18,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import webfont from "webfontloader";
+import VueMq from "vue-mq";
 
 import VueFire from "vuefire";
 import firebase from "firebase/app";
@@ -59,6 +60,16 @@ firebase.initializeApp({
 export const db = firebase.firestore();
 
 Vue.use(VueFire);
+
+Vue.use(VueMq, {
+  breakpoints: {
+    phone: 700,
+    tablet: 1200,
+    other: Infinity
+  },
+  defaultBreakpoint: "phone" // customize this for SSR
+});
+
 Vue.config.productionTip = false;
 
 new Vue({
