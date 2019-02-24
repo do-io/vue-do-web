@@ -40,8 +40,8 @@
     </article>
 
     <div class="bullets">
-      <a href="#code">code</a>
-      <a href="#design">design</a>
+      <button @click="slideChange('code')" data-click="code">code</button>
+      <button @click="slideChange('design')" data-click="design">design</button>
     </div>
   </main>
 </template>
@@ -62,7 +62,21 @@ export default class HomeSlider extends Vue {
 
   public mounted() {
     // @ts-ignore
-    document.querySelectorAll("a[href='#code']")[0].click();
+    // document.querySelectorAll("a[href='#code']")[0].click();
+    this.slideChange("code");
+  }
+
+  public slideChange(slideSelection: string) {
+    var codeVisable = document.getElementById("code");
+    var designVisable = document.getElementById("design");
+    if (slideSelection === "code") {
+      codeVisable.style.setProperty("opacity", "1");
+      designVisable.style.setProperty("opacity", "0");
+    }
+    if (slideSelection === "design") {
+      codeVisable.style.setProperty("opacity", "0");
+      designVisable.style.setProperty("opacity", "1");
+    }
   }
 }
 </script>
@@ -71,75 +85,49 @@ export default class HomeSlider extends Vue {
 main {
   height: 100%;
   position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 .bullets {
-  position: fixed;
-  bottom: 8vh;
-  left: 2.19rem;
-  a {
-    margin-right: 1.5rem;
-    line-height: 1.8;
-    width: 5rem;
-    overflow: hidden;
+  grid-row: 1;
+  margin: 1rem 2.19rem;
+  button {
     background-color: var(--dark-bg-color);
-    color: transparent;
-    border-bottom: 2px solid var(--blue);
-    display: inline-block;
-    &[href="#code"] {
+    border-bottom: 2px solid;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeIn ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    &[data-click="code"] {
       color: var(--green);
-      border-bottom-color: var(--green);
-      opacity: 0;
-      animation: fadeIn ease-in-out 1;
-      animation-fill-mode: forwards;
-      animation-duration: 1s;
-      animation-delay: 1s;
     }
-    &[href="#design"] {
+    &[data-click="design"] {
       color: var(--yellow);
-      border-bottom-color: var(--yellow);
-      opacity: 0;
-      animation: fadeIn ease-in-out 1;
-      animation-fill-mode: forwards;
-      animation-duration: 1s;
-      animation-delay: 1.5s;
     }
   }
-}
-.router-link-active ~ #code {
-  opacity: 1;
 }
 #code {
-  // opacity: 1;
-  &:target {
-    opacity: 1;
-  }
-  // &:target ~ .slide#design {
-  //     opacity: 0;
-  // }
+  opacity: 0;
 }
 #design {
   opacity: 0;
-  &:target {
-    opacity: 1;
-  }
-  // &:target ~ #code {
-  //     display: none;
-  // }
 }
 .slide {
   transition: opacity 1.5s ease-in-out 0.25s;
   display: grid;
   position: absolute;
   opacity: 0;
-  // height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   grid-template-columns: 500px 2fr;
   grid-template-rows: calc(66vh - 100px) auto;
+  grid-row: 2;
   svg {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     max-width: 100%;
     max-height: calc(100% - 80px);
@@ -186,20 +174,15 @@ main {
     }
   }
   &#code {
-    // display: none;
     color: var(--green);
     h2 {
       color: var(--green);
     }
     .rolling {
       border-color: var(--green);
-      // > div {
-      //   height: calc(100% - 7rem);
-      // }
     }
   }
   &#design {
-    // display: none;
     color: var(--yellow);
     h2 {
       color: var(--yellow);
@@ -214,22 +197,23 @@ main {
     z-index: -1;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .slide {
-    grid-template-rows: auto 1fr 12rem;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
+    margin: 1.5rem 0 0;
+    padding: 0 0 1rem;
+    overflow: hidden;
     h2 {
       grid-row: 1;
     }
     .rolling {
-      height: 100%;
-      margin: 2.19rem 100px 0 2.19rem;
-      > div {
-        height: calc(100% - 3.5rem);
-      }
+      height: auto;
+      margin: 1.5rem 2.19rem;
     }
     svg {
-      opacity: 0;
+      right: 1rem;
+      opacity: 0.4;
     }
   }
 }
@@ -237,13 +221,6 @@ main {
   .slide {
     svg {
       width: 733px;
-    }
-  }
-}
-@media screen and (max-width: 970px) {
-  .slide {
-    svg {
-      right: 77px;
     }
   }
 }

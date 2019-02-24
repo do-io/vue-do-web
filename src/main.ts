@@ -5,7 +5,12 @@ import store from "./store";
 import "./registerServiceWorker";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch, faInfoCircle } from "@fortawesome/pro-light-svg-icons";
+import {
+  faSearch,
+  faInfoCircle,
+  faHome,
+  faBars
+} from "@fortawesome/pro-light-svg-icons";
 import {
   faLinkedin,
   faTwitter,
@@ -33,7 +38,9 @@ library.add(
   faGithub,
   faCodepen,
   faDribbble,
-  faBehance
+  faBehance,
+  faHome,
+  faBars
 );
 
 webfont.load({
@@ -46,7 +53,13 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.component("bydesign-logo", () => import("@/assets/images/byDesign.svg"));
 Vue.component("headerFull", () => import("@/components/layout/HeaderFull.vue"));
+Vue.component("headerPhone", () =>
+  import("@/components/layout/HeaderPhone.vue")
+);
 Vue.component("footerFull", () => import("@/components/layout/FooterFull.vue"));
+Vue.component("footerPhone", () =>
+  import("@/components/layout/FooterPhone.vue")
+);
 
 firebase.initializeApp({
   apiKey: process.env.VUE_APP_FIREBASE_APIKEY,

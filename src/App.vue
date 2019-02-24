@@ -7,7 +7,12 @@
       <headerPhone/>
     </mq-layout>
     <router-view/>
-    <footerFull/>
+    <mq-layout mq="tablet+">
+      <footerFull/>
+    </mq-layout>
+    <mq-layout class="footer" mq="phone">
+      <footerPhone/>
+    </mq-layout>
   </div>
 </template>
 
@@ -119,9 +124,16 @@ details {
   height: 100vh;
   width: 100vw;
   position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   // > div {
   //   height: calc(100vh - 115px);
   // }
+}
+.footer {
+  height: 80px;
+  background-color: var(--dark-bg-color);
+  color: var(--blue);
 }
 .center {
   text-align: center;

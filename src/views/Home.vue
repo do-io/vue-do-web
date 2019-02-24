@@ -12,8 +12,8 @@ import HomeSlider from "@/components/HomeSlider.vue"; // @ is an alias to /src
 
 @Component({
   components: {
-    HomeSlider,
-  },
+    HomeSlider
+  }
 })
 export default class Home extends Vue {
   public created() {
@@ -22,3 +22,9 @@ export default class Home extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+.home {
+  height: 100%;
+}
+</style>
