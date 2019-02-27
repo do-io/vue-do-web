@@ -23,7 +23,7 @@
   </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 footer {
   bottom: 0;
   position: absolute;

@@ -1,10 +1,10 @@
 <template>
   <footer class="center">
-    <a href>
-      <font-awesome-icon :icon="['fal', 'bars']"/>
-      <br>Menu
+    <a href="/about">
+      <font-awesome-icon :icon="['fal', 'swatchbook']"/>
+      <br>About
     </a>
-    <a href>
+    <a href="/">
       <font-awesome-icon :icon="['fal', 'home']"/>
       <br>Home
     </a>
@@ -18,14 +18,17 @@
 <style lang="scss" scoped>
 footer {
   position: fixed;
+  bottom: 0;
   width: 100%;
   height: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-content: center;
+  background-color: var(--dark-bg-color);
+  color: var(--dark-color);
   a {
-    color: var(--blue);
+    color: var(--dark-a-color);
   }
 }
 </style>

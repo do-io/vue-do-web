@@ -123,13 +123,16 @@ article {
     }
   }
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 700px) {
   article {
     height: auto;
     grid-template-rows: 1fr;
+    margin: 2.19rem 2.19rem;
+    grid-template-columns: 1fr;
     > div {
+      padding: 0;
       margin-left: 0;
-      grid-column: 1 / span 2;
+      grid-column: 1;
       max-height: initial;
     }
   }

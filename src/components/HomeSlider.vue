@@ -67,15 +67,17 @@ export default class HomeSlider extends Vue {
   }
 
   public slideChange(slideSelection: string) {
-    var codeVisable = document.getElementById("code");
-    var designVisable = document.getElementById("design");
-    if (slideSelection === "code") {
-      codeVisable.style.setProperty("opacity", "1");
-      designVisable.style.setProperty("opacity", "0");
-    }
-    if (slideSelection === "design") {
-      codeVisable.style.setProperty("opacity", "0");
-      designVisable.style.setProperty("opacity", "1");
+    const codeVisable = document.getElementById("code");
+    const designVisable = document.getElementById("design");
+    if (codeVisable && designVisable) {
+      if (slideSelection === "code") {
+        codeVisable.style.setProperty("opacity", "1");
+        designVisable.style.setProperty("opacity", "0");
+      }
+      if (slideSelection === "design") {
+        codeVisable.style.setProperty("opacity", "0");
+        designVisable.style.setProperty("opacity", "1");
+      }
     }
   }
 }
@@ -203,13 +205,15 @@ main {
     grid-template-columns: 1fr;
     margin: 1.5rem 0 0;
     padding: 0 0 1rem;
-    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
     h2 {
       grid-row: 1;
     }
     .rolling {
-      height: auto;
-      margin: 1.5rem 2.19rem;
+      height: calc(100% - 60px);
+      margin: 1.5rem 0.39rem;
+      overflow: auto;
     }
     svg {
       right: 1rem;

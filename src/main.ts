@@ -9,7 +9,7 @@ import {
   faSearch,
   faInfoCircle,
   faHome,
-  faBars
+  faSwatchbook
 } from "@fortawesome/pro-light-svg-icons";
 import {
   faLinkedin,
@@ -40,7 +40,7 @@ library.add(
   faDribbble,
   faBehance,
   faHome,
-  faBars
+  faSwatchbook
 );
 
 webfont.load({
