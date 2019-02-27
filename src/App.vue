@@ -33,6 +33,7 @@
 }
 html,
 body {
+  background-color: var(--dark-bg-color);
   margin: 0;
   padding: 0;
   overflow-y: scroll;
