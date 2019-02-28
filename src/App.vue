@@ -45,7 +45,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 20px;
   color: var(--dark-color);
-  background-color: var(--dark-bg-color);
 }
 h1,
 h2,

@@ -13,7 +13,7 @@ module.exports = {
     },
 
     pwa: {
-      name: 'by Design',
+      name: 'Darren by Design',
       themeColor: '#6002EE',
       msTileColor: '#6002ee',
       appleMobileWebAppStatusBarStyle: 'black-translucent'

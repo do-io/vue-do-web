@@ -52,15 +52,15 @@ export default Vue.extend({
       }
     ]
   },
-  firestore() {
-    return {
-      stories: db.collection("stories").orderBy("createdAt")
-    };
-  },
+  // firestore() {
+  //   return {
+  //     stories: db.collection("stories").orderBy("createdAt")
+  //   };
+  // },
   methods: {
-    newStory() {
-      this.$router.replace("story");
-    },
+    // newStory() {
+    //   this.$router.replace("story");
+    // },
     logout() {
       firebase
         .auth()

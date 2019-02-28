@@ -1,13 +1,13 @@
 <template>
   <footer class="center">
-    <a href="/about">
+    <router-link to="/about">
       <font-awesome-icon :icon="['fal', 'swatchbook']"/>
       <br>About
-    </a>
-    <a href="/">
+    </router-link>
+    <router-link to="/">
       <font-awesome-icon :icon="['fal', 'home']"/>
       <br>Home
-    </a>
+    </router-link>
     <a href>
       <font-awesome-icon :icon="['fal', 'info-circle']"/>
       <br>Info

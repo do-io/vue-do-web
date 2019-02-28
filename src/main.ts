@@ -51,7 +51,9 @@ webfont.load({
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
-Vue.component("bydesign-logo", () => import("@/assets/images/byDesign.svg"));
+Vue.component("bydesign-logo", () =>
+  import("@/assets/images/dd-face-round.svg")
+);
 Vue.component("headerFull", () => import("@/components/layout/HeaderFull.vue"));
 Vue.component("headerPhone", () =>
   import("@/components/layout/HeaderPhone.vue")

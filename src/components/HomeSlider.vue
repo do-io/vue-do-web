@@ -5,7 +5,7 @@
       <div class="rolling">
         <h3>Developer Advocate; Code Agnostic!</h3>
         <p>Many get that one tool and want to build everything with it.</p>
-        <p>The same as a mechanic has specialized tools to set the torque on the engine, I have learned different languages specialized for their specific job.</p>
+        <p>The same as a craftsman has specialized tools for each job they perform, I have learned different languages specialized for their specific job.</p>
         <p>Starting from C++ and moving through JavaScript, Perl, Java, C#, and PHP, each language has its own nuances that make them special for what they do.</p>
         <p>After all - you can hammer a nail with a skill saw, but it doesn't mean you should</p>
         <details>
@@ -98,15 +98,17 @@ main {
     border-bottom: 2px solid;
     font-size: 1rem;
     opacity: 0;
+    cursor: pointer;
     animation: fadeIn ease-in-out 1;
     animation-fill-mode: forwards;
     animation-duration: 1s;
-    animation-delay: 1s;
     &[data-click="code"] {
       color: var(--green);
+      animation-delay: 0.5s;
     }
     &[data-click="design"] {
       color: var(--yellow);
+      animation-delay: 1s;
     }
   }
 }
@@ -132,7 +134,7 @@ main {
     position: absolute;
     bottom: 0;
     max-width: 100%;
-    max-height: calc(100% - 80px);
+    max-height: calc(100vh - 80px);
     width: calc(95vw - 32vw);
     height: auto;
     display: block;
@@ -190,15 +192,15 @@ main {
       color: var(--yellow);
     }
     .rolling {
-      border-color: var(--blue);
+      border-color: var(--yellow);
     }
   }
 }
-@media screen and (max-width: 1000px) {
-  svg {
-    z-index: -1;
-  }
-}
+// @media screen and (max-width: 1000px) {
+//   svg {
+//     z-index: -1;
+//   }
+// }
 @media screen and (max-width: 700px) {
   .slide {
     grid-template-rows: auto 1fr;
@@ -218,13 +220,6 @@ main {
     svg {
       right: 1rem;
       opacity: 0.4;
-    }
-  }
-}
-@media screen and (min-width: 1160px) {
-  .slide {
-    svg {
-      width: 733px;
     }
   }
 }

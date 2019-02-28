@@ -2,6 +2,9 @@ import Vue from "vue";
 import Router from "vue-router";
 import VueHead from "vue-head";
 
+const home = () => import("@/views/Home.vue");
+const about = () => import("@/views/About.vue");
+
 Vue.use(VueHead, {
   separator: " () => ",
   complement: process.env.VUE_APP_TITLE
@@ -16,27 +19,12 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: () => import("@/views/Home.vue")
-    },
-    {
-      path: "/stories",
-      name: "stories",
-      component: () => import("@/views/Stories.vue")
+      component: home
     },
     {
       path: "/about",
       name: "about",
-      component: () => import("@/views/About.vue")
+      component: about
     }
-    // {
-    //   path: "/login",
-    //   name: "login",
-    //   component: () => import("@/views/SignIn.vue")
-    // },
-    // {
-    //   path: "/stories/edit",
-    //   name: "newStory",
-    //   component: () => import("@/views/Story.vue")
-    // }
   ]
 });

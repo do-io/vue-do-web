@@ -1,7 +1,9 @@
 <template>
   <header>
     <div id="logo">
-      <bydesign-logo/>
+      <router-link to="/">
+        <bydesign-logo alt="Darren by Design"/>
+      </router-link>
     </div>
     <div id="nav">
       <router-link to="/">Home</router-link>
@@ -17,17 +19,21 @@ header {
   display: grid;
   grid-row: 1;
   grid-template-columns: 1fr 2fr;
+  margin: 0 2.19rem;
 }
 #logo {
   text-align: left;
-  padding: 14px;
-  > svg {
-    max-height: 80px;
-    min-width: 256px;
+  padding: 1.65rem 0;
+  height: 50px;
+  a {
+    opacity: 1;
+  }
+  svg {
+    height: 100%;
   }
 }
 #nav {
-  padding: 2.19rem;
+  padding: 2.19rem 0;
   color: var(--dark-color);
   text-align: right;
   a {

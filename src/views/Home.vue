@@ -18,7 +18,7 @@ import HomeSlider from "@/components/HomeSlider.vue"; // @ is an alias to /src
 export default class Home extends Vue {
   public created() {
     document.title =
-      "Code. Design. Story. Strategy - " + process.env.VUE_APP_TITLE;
+      "Code. Design. Story. Strategy. | " + process.env.VUE_APP_TITLE;
   }
 }
 </script>
