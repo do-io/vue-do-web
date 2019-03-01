@@ -17,7 +17,7 @@
           </ul>
         </details>
       </div>
-      <CodeSvg/>
+      <CodeSvg v-bind:alt="development"/>
     </article>
     <article id="design" class="slide">
       <h2>DESIGN</h2>
@@ -36,7 +36,7 @@
           </ul>
         </details>
       </div>
-      <DesignSvg/>
+      <DesignSvg v-bind:alt="interaction_design"/>
     </article>
 
     <div class="bullets">
@@ -62,7 +62,6 @@ export default class HomeSlider extends Vue {
 
   public mounted() {
     // @ts-ignore
-    // document.querySelectorAll("a[href='#code']")[0].click();
     this.slideChange("code");
   }
 

@@ -24,6 +24,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import webfont from "webfontloader";
 import VueMq from "vue-mq";
+import vueHeadful from "vue-headful";
 
 import VueFire from "vuefire";
 import firebase from "firebase/app";
@@ -48,6 +49,8 @@ webfont.load({
     id: "qpx4wdb"
   }
 });
+
+Vue.component("vue-headful", vueHeadful);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

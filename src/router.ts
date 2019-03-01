@@ -1,14 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
-import VueHead from "vue-head";
 
 const home = () => import("@/views/Home.vue");
 const about = () => import("@/views/About.vue");
-
-Vue.use(VueHead, {
-  separator: " () => ",
-  complement: process.env.VUE_APP_TITLE
-});
 
 Vue.use(Router);
 
