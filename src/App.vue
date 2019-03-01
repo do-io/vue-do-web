@@ -126,9 +126,6 @@ details {
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  // > div {
-  //   height: calc(100vh - 115px);
-  // }
 }
 .footer {
   height: 80px;

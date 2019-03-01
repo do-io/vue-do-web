@@ -232,7 +232,7 @@ main {
 @media screen and (min-width: 1000px) {
   .slide {
     h2 {
-      font-size: 130px;
+      font-size: 120px;
     }
   }
 }
