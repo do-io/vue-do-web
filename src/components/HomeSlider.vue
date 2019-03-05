@@ -142,7 +142,7 @@ main {
   h2 {
     font-family: blenny;
     font-size: 13vw;
-    line-height: 0.7;
+    line-height: 0.35;
     margin: 0 0 0 2.19rem;
     grid-column: 1;
     grid-row: 2;

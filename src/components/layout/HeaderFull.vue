@@ -23,8 +23,9 @@ header {
 }
 #logo {
   text-align: left;
-  padding: 1.65rem 0;
+  width: 50px;
   height: 50px;
+  align-self: center;
   a {
     opacity: 1;
   }
