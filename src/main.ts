@@ -1,4 +1,5 @@
 import Vue from "vue";
+import './plugins/vuetify'
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -25,6 +26,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import webfont from "webfontloader";
 import VueMq from "vue-mq";
 import vueHeadful from "vue-headful";
+import Vuetify from "vuetify";
 
 import VueFire from "vuefire";
 import firebase from "firebase/app";
@@ -87,6 +89,8 @@ Vue.use(VueMq, {
   },
   defaultBreakpoint: "phone" // customize this for SSR
 });
+
+Vue.use(Vuetify);
 
 Vue.config.productionTip = false;
 

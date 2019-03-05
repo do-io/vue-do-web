@@ -11858,7 +11858,7 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
-stylus-loader@^3.0.2:
+stylus-loader@^3.0.1, stylus-loader@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/stylus-loader/-/stylus-loader-3.0.2.tgz#27a706420b05a38e038e7cacb153578d450513c6"
   integrity sha512-+VomPdZ6a0razP+zinir61yZgpw2NfljeSsdUF5kJuEzlo3khXhY19Fn6l8QQz1GRJGtMCo8nG5C04ePyV7SUA==
@@ -12665,6 +12665,11 @@ vue-class-component@^6.0.0, vue-class-component@^6.2.0:
   resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-6.3.2.tgz#e6037e84d1df2af3bde4f455e50ca1b9eec02be6"
   integrity sha512-cH208IoM+jgZyEf/g7mnFyofwPDJTM/QvBNhYMjqGB8fCsRyTf68rH2ISw/G20tJv+5mIThQ3upKwoL4jLTr1A==
 
+vue-cli-plugin-vuetify@^0.4.6:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-vuetify/-/vue-cli-plugin-vuetify-0.4.6.tgz#91c4534d17bc04bbd6f41eacdb6ff49be0f59f2b"
+  integrity sha512-vkai2B3XqanmscUYSioIjJkU7bzBZGl9mCuIISEZtaDy3qWEkF143UGdJ72u/rGuOytLxpV+9B+FNoV93qlnag==
+
 vue-headful@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/vue-headful/-/vue-headful-2.0.1.tgz#43876d62d5c21804bbde72f8a89b55cac1026d63"
@@ -12858,12 +12863,19 @@ vuepress@^0.14.9:
     webpackbar "^2.6.1"
     workbox-build "^3.1.0"
 
+vuetify-loader@^1.0.5:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/vuetify-loader/-/vuetify-loader-1.2.1.tgz#7b4724d9566ad4c400dec69d0192b83af0924c63"
+  integrity sha512-p4WEVvWt6/5Xm5H8A4ESzWlheAbPbQAhojhcpf9SnOIH9894mBmU4l7asuD7xZ2E/MTl1BeX3ZZj2hrv7/NIxQ==
+  dependencies:
+    loader-utils "^1.1.0"
+
 vuetify-scss@^1.3.5:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/vuetify-scss/-/vuetify-scss-1.3.5.tgz#b3ff52bf6027d7d8767a2c1aec76ddcfa59c7b64"
   integrity sha512-/YsWqZ3/9L6eGrz6TsW1B4k/fiM47K1EBATsr77Esakk5kkG6xJh/aTW4id1mW5z+pFTGR25N+XNO5CJ4wnIrw==
 
-vuetify@^1.5.3:
+vuetify@^1.3.0:
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.5.4.tgz#2f0f3a457ba0dcbf5bb1931b644532ae1e46533d"
   integrity sha512-hlTJHh4a1vAZQq4XwIcEpdDXoKNPqXbE95iV2a780FXvFnacu7qjHO4BrOUOkWGeAuFb1NTQM2vJtb4Jhxn26Q==
