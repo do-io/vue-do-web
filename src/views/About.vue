@@ -19,7 +19,7 @@ import AboutDarren from "@/components/AboutDarren.vue"; // @ is an alias to /src
 
 })
 export default class About extends Vue {
-  data() {
+  public data() {
     return {
       title: "About the Charismatic Codefauna | " + process.env.VUE_APP_TITLE
     }

@@ -1,0 +1,192 @@
+<template>
+  <v-app>
+    <v-toolbar app>
+      <v-toolbar-title href="/">
+        <router-link to="/">
+          <span class="thick">DARREN</span>
+        </router-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn flat href="/">Home</v-btn>
+        <v-btn flat href="/about">About</v-btn>
+        <v-btn icon>
+          <font-awesome-icon :icon="['fal', 'search']" id="search"/>
+        </v-btn>
+        <!-- <router-link to="/stories">Stories</router-link> -->
+      </v-toolbar-items>
+    </v-toolbar>
+    <v-content>
+      <div>v-content</div>
+      <!-- <router-view/> -->
+    </v-content>
+  </v-app>
+</template>
+
+<style lang="scss">
+:root {
+  --light-color: #101656;
+  --dark-bg-color: #101656;
+  --dark-color: #2cccf3;
+  --dark-a-color: #2cccf3;
+  --blue: #2cccf3;
+  --dk-blue: #0f305c;
+  --green: #1de9b6;
+  --pink: #f515ca;
+  --purple: #6002ee;
+  --red: #ff1744;
+  --yellow: #ffd24c;
+  --orange: #f57c00;
+  --white: whitesmoke;
+
+  --code: #1de9b6;
+  --designer: #ffd24c;
+}
+html,
+body {
+  // background-color: var(--dark-bg-color);
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // color: var(--dark-color);
+}
+// body {
+// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2.75rem 0 1rem;
+  font-weight: normal;
+  line-height: 1.15;
+}
+h1 {
+  margin-top: 0;
+  font-size: 2.488rem;
+}
+h2 {
+  font-size: 2.074rem;
+}
+h3 {
+  font-size: 1.728rem;
+}
+h4 {
+  font-size: 1.44rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+}
+small,
+.text_small {
+  font-size: 0.833em;
+}
+a {
+  color: var(--yellow);
+  opacity: 0.8;
+  text-decoration: none;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+::placeholder {
+  opacity: 1;
+}
+input,
+button,
+select {
+  font-family: inherit;
+  font-size: 0.9rem;
+  border-radius: 0;
+  border: none;
+}
+input,
+select {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0.5rem;
+}
+button {
+  padding: 0.25rem 1rem;
+  margin: 0.25rem 0.5rem;
+}
+section {
+  margin-left: 2.19rem;
+  margin-right: 100px;
+}
+details {
+  cursor: pointer;
+  li {
+    margin: 0.5rem 0;
+  }
+}
+.application {
+  font: inherit;
+}
+.theme--light.application,
+.theme--light .v-sheet {
+  color: var(--light-color);
+}
+.v-toolbar__title .thick {
+  font-size: 1.8rem;
+}
+#app {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.footer {
+  height: 80px;
+  background-color: var(--dark-bg-color);
+  color: var(--blue);
+}
+.center {
+  text-align: center;
+}
+.definition {
+  background-color: var(--yellow);
+  color: var(--dark-bg-color);
+  padding: 1rem;
+  margin-bottom: 16px;
+}
+.thick {
+  font-family: "Blenny";
+}
+.edit-nav {
+  display: flex;
+  justify-content: end;
+  align-content: end;
+}
+.new-story {
+  background-color: var(--green);
+}
+.logout {
+  max-width: 90px;
+  justify-self: end;
+  align-self: end;
+  background-color: var(--yellow);
+  color: var(--dark-bg-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>

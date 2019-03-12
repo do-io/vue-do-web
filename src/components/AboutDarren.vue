@@ -3,7 +3,7 @@
     <article id="about">
       <h1>About a Charismatic Codefauna!</h1>
       <div>
-        <div class="definition">Charismatic Codefauna
+        <div class="definition elevation-4">Charismatic Codefauna
           <br>/kerəzˈmadik kōdˈfônə / noun
           <ol>
             <li>a large animal species with symbolic value intrinsic to detailing code architectures</li>
@@ -67,7 +67,7 @@ main {
     display: block;
     left: 2.19rem;
     // z-index: -1;
-    opacity: 0;
+    // opacity: 0;
     animation: fadeIn ease-in-out 1;
     animation-fill-mode: forwards;
     animation-duration: 1s;
@@ -77,6 +77,7 @@ main {
 article {
   position: relative;
   grid-column: 2;
+  top: 3vh;
   margin-right: 100px;
   margin-left: 2.19rem;
   height: calc(82vh - 80px);
@@ -89,7 +90,7 @@ article {
     grid-column: 2;
     grid-row: 1;
     margin-left: 2.19rem;
-    opacity: 0;
+    // opacity: 0;
     animation: fadeIn ease-in-out 1;
     animation-fill-mode: forwards;
     animation-duration: 1s;
@@ -103,7 +104,7 @@ article {
     grid-row: 2;
     margin-left: 2.19rem;
     // overflow-x: scroll;
-    opacity: 0;
+    // opacity: 0;
     animation: fadeIn ease-in-out 1;
     animation-fill-mode: forwards;
     animation-duration: 1s;

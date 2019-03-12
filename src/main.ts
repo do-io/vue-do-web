@@ -1,5 +1,5 @@
 import Vue from "vue";
-import './plugins/vuetify'
+import "./plugins/vuetify";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -7,11 +7,25 @@ import "./registerServiceWorker";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faSearch,
-  faInfoCircle,
-  faHome,
-  faSwatchbook
-} from "@fortawesome/pro-light-svg-icons";
+  faSearch as farSearch,
+  faInfoCircle as farInfoCircle,
+  faHome as farHome,
+  faSwatchbook as farSwatchbook,
+  faPencilRuler as farPencilRuler,
+  faTint as farTint,
+  faCode as farCode,
+  faBookUser as farBookUser
+} from "@fortawesome/pro-regular-svg-icons";
+import {
+  faSearch as fasSearch,
+  faInfoCircle as fasInfoCircle,
+  faHome as fasHome,
+  faSwatchbook as fasSwatchbook,
+  faPencilRuler as fasPencilRuler,
+  faTint as fasTint,
+  faCode as fasCode,
+  faBookUser as fasBookUser
+} from "@fortawesome/pro-solid-svg-icons";
 import {
   faLinkedin,
   faTwitter,
@@ -25,7 +39,6 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import webfont from "webfontloader";
 import VueMq from "vue-mq";
-import vueHeadful from "vue-headful";
 import Vuetify from "vuetify";
 
 import VueFire from "vuefire";
@@ -33,8 +46,6 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 
 library.add(
-  faSearch,
-  faInfoCircle,
   faLinkedin,
   faTwitter,
   faGoogle,
@@ -42,8 +53,24 @@ library.add(
   faCodepen,
   faDribbble,
   faBehance,
-  faHome,
-  faSwatchbook
+
+  farSearch,
+  farInfoCircle,
+  farHome,
+  farSwatchbook,
+  farPencilRuler,
+  farTint,
+  farCode,
+  farBookUser,
+
+  fasSearch,
+  fasInfoCircle,
+  fasHome,
+  fasSwatchbook,
+  fasPencilRuler,
+  fasTint,
+  fasCode,
+  fasBookUser
 );
 
 webfont.load({
@@ -52,21 +79,7 @@ webfont.load({
   }
 });
 
-Vue.component("vue-headful", vueHeadful);
-
 Vue.component("font-awesome-icon", FontAwesomeIcon);
-
-Vue.component("bydesign-logo", () =>
-  import("@/assets/images/dd-face-round.svg")
-);
-Vue.component("headerFull", () => import("@/components/layout/HeaderFull.vue"));
-Vue.component("headerPhone", () =>
-  import("@/components/layout/HeaderPhone.vue")
-);
-Vue.component("footerFull", () => import("@/components/layout/FooterFull.vue"));
-Vue.component("footerPhone", () =>
-  import("@/components/layout/FooterPhone.vue")
-);
 
 firebase.initializeApp({
   apiKey: process.env.VUE_APP_FIREBASE_APIKEY,
@@ -90,7 +103,17 @@ Vue.use(VueMq, {
   defaultBreakpoint: "phone" // customize this for SSR
 });
 
-Vue.use(Vuetify);
+Vue.use(Vuetify, {
+  theme: {
+    primary: "#101656",
+    secondary: "#1de9b6",
+    accent: "#ffd24c",
+    error: "#ff1744",
+    info: "#2cccf3",
+    success: "#1de9b6",
+    warning: "#f57c00"
+  }
+});
 
 Vue.config.productionTip = false;
 
