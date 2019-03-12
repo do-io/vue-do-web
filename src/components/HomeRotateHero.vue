@@ -22,7 +22,7 @@
                   <h3>{{n.headline}}</h3>
                 </v-card-title>
                 <v-card-text>
-                  {{n.narrative | nl2br}}
+                  <div v-html="n.narrative"></div>
                   <details>
                     <summary>{{n.summary.title}}</summary>
                     <ul>
@@ -70,15 +70,13 @@ Vue.extend({
           swot: "CODE",
           headline: "Developer Advocate; Code Agnostic!",
           narrative:
-            `Brandmarks, mobile applications, and magazines all have commonalities – people use them
+           `<p>Many get that one tool and want to build everything with it.
 
-The brand marks help people know who has made or is selling a product or service.
+            <p>The same as a craftsman has specialized tools for each job they perform, I have learned different languages specialized for their specific situation.</p>
 
-Applications need to be easy to use and consider how people will use them, or it isn't helpful.
+            <p>Starting from C++ and moving through JavaScript, Perl, Java, C#, and PHP, each language has its own nuances that make them unique for what they do.</p>
 
-Magazines, newspapers, and powerpoint presentations need to convey information easily without wearing down the reader.
-
-Think of entering a dark room new to you. Do you turn on the lights without much of a thought?`,
+            <p>After all - you can hammer a nail with a skill saw, but it doesn't mean you should</p>`,
           summary: {
             title: "Development Specialties",
             skills: [
@@ -95,7 +93,15 @@ Think of entering a dark room new to you. Do you turn on the lights without much
           swot: "DESIGN",
           headline: "People are the designation!",
           narrative:
-            "<p>Brandmarks, mobile applications and magazines all have commonalities – people use them</p><p>The brandmarks help peole know who has made or is selling a product or service.</p><p>Applications need to be easy to use and consider how people will use the application or it isn't helpful.</p><p>Magazines, newspapers, and powerpoint presentations need to convey information aeasily without wearing down the reader.</p><p>Think of entering a dark room new to you. Do you turn on the lights without much of a thought?</p>",
+           `<p>Brandmarks, mobile applications, and magazines all have commonalities – people use them</p>
+
+            <p>The brand marks help people know who has made or is selling a product or service.</p>
+
+            <p>Applications need to be easy to use and consider how people will use them, or it isn't helpful.</p>
+
+            <p>Magazines, newspapers, and powerpoint presentations need to convey information easily without wearing down the reader.</p>
+
+            <p>Think of entering a dark room new to you. Do you turn on the lights without much of a thought?</p>`,
           summary: {
             title: "Design Specialties",
             skills: [
