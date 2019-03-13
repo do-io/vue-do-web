@@ -29,6 +29,20 @@
 <style lang="scss">
 :root {
   --light-color: #101656;
+  --dark-bg-color: #101656;
+  --dark-color: #2cccf3;
+  --blue: #2cccf3;
+  --dk-blue: #0f305c;
+  --green: #1de9b6;
+  --pink: #f515ca;
+  --purple: #6002ee;
+  --red: #ff1744;
+  --yellow: #ffd24c;
+  --orange: #f57c00;
+  --white: whitesmoke;
+
+  --code: #1de9b6;
+  --designer: #ffd24c;
 }
 html {
   font-size: 18px;
@@ -44,7 +58,10 @@ h6 {
 }
 h1 {
   margin-top: 0;
-  font-size: 2.488rem;
+  font-size: 3.4rem;
+  font-family: blenny, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
 }
 h2 {
   font-size: 2.074rem;
@@ -67,8 +84,17 @@ a {
 nav .logo {
   font-size: 2rem;
 }
+article h1,
+article h2 {
+  text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14),
+    0px 1px 5px rgba(0, 0, 0, 0.12);
+}
 .thick {
   font-family: "blenny", sans-serif;
+}
+.definition {
+  background-color: var(--yellow);
+  padding: 1rem;
 }
 .theme--light.application,
 .theme--light.v-sheet,

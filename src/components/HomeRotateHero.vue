@@ -17,7 +17,7 @@
           <section>
             <h2 class="thick display-4">{{n.swot}}</h2>
             <v-card elevation-4>
-              <article>
+              <article :class="((n.swot))">
                 <v-card-title>
                   <h3>{{n.headline}}</h3>
                 </v-card-title>
@@ -69,8 +69,7 @@ Vue.extend({
         {
           swot: "CODE",
           headline: "Developer Advocate; Code Agnostic!",
-          narrative:
-           `<p>Many get that one tool and want to build everything with it.
+          narrative: `<p>Many get that one tool and want to build everything with it.
 
             <p>The same as a craftsman has specialized tools for each job they perform, I have learned different languages specialized for their specific situation.</p>
 
@@ -92,8 +91,7 @@ Vue.extend({
         {
           swot: "DESIGN",
           headline: "People are the designation!",
-          narrative:
-           `<p>Brandmarks, mobile applications, and magazines all have commonalities – people use them</p>
+          narrative: `<p>Brandmarks, mobile applications, and magazines all have commonalities – people use them</p>
 
             <p>The brand marks help people know who has made or is selling a product or service.</p>
 
@@ -132,11 +130,21 @@ section {
     article {
       height: 100%;
       .v-card__text {
-        height: calc(100% - 148px);
+        // height: calc(100% - 148px);
         overflow-y: scroll;
         position: relative;
       }
     }
+  }
+}
+.CODE {
+  .v-card__text {
+    height: calc(100% - 148px);
+  }
+}
+.DESIGN {
+  .v-card__text {
+    height: calc(100% - 94px);
   }
 }
 .display-4 {

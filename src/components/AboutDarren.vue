@@ -3,13 +3,13 @@
     <article id="about">
       <h1>About a Charismatic Codefauna!</h1>
       <div>
-        <div class="definition elevation-4">Charismatic Codefauna
+        <p><div class="definition elevation-4">Charismatic Codefauna
           <br>/kerəzˈmadik kōdˈfônə / noun
           <ol>
             <li>a large animal species with symbolic value intrinsic to detailing code architectures</li>
             <!-- <li>Darren</li> -->
           </ol>
-        </div>
+        </div></p>
         <p>Since I was a kid, I had two interests, figuring out how to make things work, and drawing.</p>
         <p>Introduced to caligraphy and lettering books, I loved letterforms. I was given a calligraphy set, but I learned I prefered letter formss more than the art of calligraphy.</p>
         <p>I also had a growing stack of hot rod magazines. I would read and study the builds, looking at the designs and shapes of the cars and the intrigue of building a blueprinted and balanced engine.</p>
