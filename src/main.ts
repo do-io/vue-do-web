@@ -14,7 +14,8 @@ import {
   faPencilRuler as farPencilRuler,
   faTint as farTint,
   faCode as farCode,
-  faBookUser as farBookUser
+  faBookUser as farBookUser,
+  faBookSpells as farBookSpells
 } from "@fortawesome/pro-regular-svg-icons";
 import {
   faSearch as fasSearch,
@@ -24,7 +25,8 @@ import {
   faPencilRuler as fasPencilRuler,
   faTint as fasTint,
   faCode as fasCode,
-  faBookUser as fasBookUser
+  faBookUser as fasBookUser,
+  faBookSpells as fasBookSpells
 } from "@fortawesome/pro-solid-svg-icons";
 import {
   faLinkedin,
@@ -62,6 +64,7 @@ library.add(
   farTint,
   farCode,
   farBookUser,
+  farBookSpells,
 
   fasSearch,
   fasInfoCircle,
@@ -70,7 +73,8 @@ library.add(
   fasPencilRuler,
   fasTint,
   fasCode,
-  fasBookUser
+  fasBookUser,
+  fasBookSpells
 );
 
 webfont.load({

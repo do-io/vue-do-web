@@ -1,11 +1,12 @@
 <template>
-  <v-layout align-center>
+  <v-layout fill-height>
     <v-item-group v-model="window" mandatory tag="v-flex">
       <v-item v-for="n in front.length" :key="n">
         <div slot-scope="{ active, toggle }">
           <v-btn :input-value="active" icon @click="toggle">
             <font-awesome-icon :icon="['far', 'code']" v-if="n === 1"/>
             <font-awesome-icon :icon="['far', 'swatchbook']" v-else-if="n===2"/>
+            <font-awesome-icon :icon="['far', 'book-spells']" v-else-if="n===3"/>
           </v-btn>
         </div>
       </v-item>
@@ -13,17 +14,17 @@
 
     <v-flex>
       <v-window v-model="window">
-        <v-window-item class="swot" v-for="n in front" :key="n" transition="0">
+        <v-window-item class="swot" v-for="n in front" :key="n">
           <section>
             <h2 class="thick display-4">{{n.swot}}</h2>
             <v-card elevation-4>
-              <article :class="((n.swot))">
+              <article :class="((n.swot.toLowerCase()))">
                 <v-card-title>
                   <h3>{{n.headline}}</h3>
                 </v-card-title>
                 <v-card-text>
                   <div v-html="n.narrative"></div>
-                  <details>
+                  <details v-if="n.summary">
                     <summary>{{n.summary.title}}</summary>
                     <ul>
                       <li v-for="skill in n.summary.skills">{{skill}}</li>
@@ -41,6 +42,10 @@
             <background2 class="backgroundSvg"/>
             <designerSvg class="designing"/>
           </span>
+          <span v-show="n.swot == 'STORY'">
+            <background3 class="backgroundSvg1"/>
+            <storyLayoutSvg class="story-layout"/>
+          </span>
         </v-window-item>
       </v-window>
     </v-flex>
@@ -57,6 +62,11 @@ Vue.component("coderSvg", () => import("@/assets/images/coding.svg"));
 Vue.component("background2", () => import("@/assets/images/background1.svg"));
 Vue.component("designerSvg", () =>
   import("@/assets/images/interactive-designer.svg")
+);
+// story
+Vue.component("background3", () => import("@/assets/images/background2.svg"));
+Vue.component("storyLayoutSvg", () =>
+  import("@/assets/images/story-layout.svg")
 );
 
 export default // Coder: () => import("@/components/Coder.vue"),
@@ -108,6 +118,19 @@ Vue.extend({
               "Illustrator, XD, Photoshop, Invision"
             ]
           }
+        },
+        {
+          swot: "STORY",
+          headline: "A rumor of a plot intrigues",
+          narrative: `<p>A point of view plus an object of interest leads towards a potential winning topic.</p>
+
+            <p>From cave drawings and songs to spoken word and movies, people have been sharing experiences through stories for millennia.</p>
+
+            <p>I have written articles sharing tech developments, instructional howtos, and even written some short stories.</p>
+
+            <p>I would argue that some of the best stories I have written are in the software I have written or the videos I've edited.</p>
+            
+            <p>If you have the time, and I am in the right mood, I might even tell you good ones.</p>`
         }
       ]
     };
@@ -137,12 +160,17 @@ section {
     }
   }
 }
-.CODE {
+.code {
   .v-card__text {
     height: calc(100% - 148px);
   }
 }
-.DESIGN {
+.story {
+  .v-card__text {
+    height: calc(100% - 94px);
+  }
+}
+.design {
   .v-card__text {
     height: calc(100% - 94px);
   }
@@ -173,6 +201,12 @@ section {
   left: 19vw;
   height: 80vh;
 }
+.backgroundSvg1 {
+  position: fixed;
+  bottom: 0;
+  left: 19vw;
+  width: 80vw;
+}
 .coding {
   position: fixed;
   bottom: -10vh;
@@ -190,5 +224,14 @@ section {
   max-height: 650px;
   // height: 80vh;
   width: 70vw;
+}
+.story-layout {
+  position: fixed;
+  bottom: 0;
+  left: 33vw;
+  right: 3vw;
+  max-height: 650px;
+  // height: 80vh;
+  width: 60vw;
 }
 </style>

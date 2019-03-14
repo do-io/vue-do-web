@@ -10,9 +10,9 @@
       <v-toolbar-items>
         <v-btn flat href="/">Home</v-btn>
         <v-btn flat href="/about">About</v-btn>
-        <v-btn icon>
-          <font-awesome-icon :icon="['fal', 'search']" id="search"/>
-        </v-btn>
+        <!-- <v-btn icon>
+          <font-awesome-icon :icon="['far', 'search']" id="search"/>
+        </v-btn>-->
         <!-- <router-link to="/stories">Stories</router-link> -->
       </v-toolbar-items>
     </v-toolbar>
@@ -103,5 +103,11 @@ article h2 {
 }
 .container {
   height: 100%;
+}
+.home .v-window__container {
+  height: 100%;
+}
+.home .v-item-group {
+  align-self: center;
 }
 </style>
